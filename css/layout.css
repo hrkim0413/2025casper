@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* 폰트 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+/* 컬러 변수 */
+/* 글자 크기 변수 */
+/* reset */
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 12px;
+  color: #333;
+  background: #fff;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* common */
+.inner {
+  max-width: 1600px;
+  width: 100%;
+  margin: auto;
+}
+
+/* 변수 */
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  transition: 0.3s;
+}
+header.h-on {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+header.h-on * {
+  color: inherit !important;
+}
+header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+header nav .gnb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+header nav .gnb a {
+  color: #fff;
+  font-size: 16px;
+}
+header nav .gnb a:hover {
+  text-decoration: underline;
+}
+header .right-nav {
+  display: flex;
+  gap: 10px;
+}
+header .right-nav li {
+  color: #fff;
+  font-size: 20px;
+}
+header .right-nav li i {
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  background: #1c1a1d;
+}
+
+/* main > nav *//*# sourceMappingURL=layout.css.map */

@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 컬러 변수 */
+$color-txt-black : #333;
+$color-txt-white : #fff;
+$color-txt-blue1 : #225499;
+$color-txt-blue2 : #3B8BAE;
+$color-txt-blue3 : #052B58;
+
+$color-bg-black : #1c1a1d;
+$color-bg-yellow : yellow;
+
+$color-nav1 : #00b3ff;
+$color-nav2 : #006EFF;
+
+$color-line-gray: #ccc;
+
+/* 글자 크기 변수 */
+$fz-s : 12px;
+$fz-m : 16px;
+
+$fz-title1 : 22px;
+$fz-title2 : 20px;
+
+/* reset */
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: $fz-s;
+  color: $color-txt-black;
+  background: $color-txt-white;
+}
+
+a {
+  color: $color-txt-black;
+  text-decoration: none;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* common */
+.inner {
+  max-width: 1600px;
+  width: 100%;
+  margin: auto;
+}
