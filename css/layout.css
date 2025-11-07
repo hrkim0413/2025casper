@@ -3,10 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 /* 컬러 변수 */
 /* 글자 크기 변수 */
+/* 변수 */
 /* reset */
 body {
   font-family: "Noto Sans", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   color: #333;
   background: #fff;
 }
@@ -27,12 +28,12 @@ a {
 
 /* common */
 .inner {
-  max-width: 1600px;
+  max-width: 1200px;
   width: 100%;
   margin: auto;
+  padding: 60px 0;
 }
 
-/* 변수 */
 /* header */
 header {
   position: fixed;
@@ -53,6 +54,7 @@ header .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1600px;
   padding: 24px 0;
 }
 header nav .gnb {
@@ -84,5 +86,130 @@ header .right-nav li i {
 footer {
   background: #1c1a1d;
 }
+footer .inner {
+  display: grid;
+  grid-template-areas: "item01 item02" "item01 item03";
+  gap: 10px 50px;
+  padding: 40px 0;
+}
+footer h2 {
+  grid-area: item01;
+}
+footer .f-lnb {
+  grid-area: item02;
+}
+footer .f-lnb ul {
+  display: flex;
+  gap: 20px;
+}
+footer .f-lnb ul li {
+  position: relative;
+}
+footer .f-lnb ul li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -10px;
+  width: 1px;
+  height: 10px;
+  background: #ccc;
+}
+footer .f-lnb ul li:last-child::after {
+  display: none;
+}
+footer .f-lnb ul li a {
+  color: #ccc;
+  font-size: 16px;
+}
+footer .f-lnb ul li a:hover {
+  text-decoration: underline;
+}
+footer .f-lnb ul li:nth-child(2) a {
+  color: #fff;
+}
+footer address {
+  grid-area: item03;
+  color: #ccc;
+  line-height: 20px;
+}
+footer address dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 30px;
+}
+footer address dl dt,
+footer address dl dd {
+  display: inline-block;
+}
+footer address dl p {
+  text-transform: uppercase;
+}
 
-/* main > nav *//*# sourceMappingURL=layout.css.map */
+/* main */
+/* aside */
+#m-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  z-index: 1;
+  width: 200px;
+  height: 240px;
+}
+#m-nav ul {
+  position: relative;
+}
+#m-nav ul li {
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px;
+  text-align: center;
+  transition: 0.5s;
+}
+#m-nav ul li:nth-child(1) {
+  top: 0;
+}
+#m-nav ul li:nth-child(2) {
+  top: 50px;
+}
+#m-nav ul li:nth-child(3) {
+  top: 100px;
+}
+#m-nav ul li:nth-child(4) {
+  top: 150px;
+}
+#m-nav ul li:nth-child(5) {
+  top: 200px;
+}
+#m-nav ul li .num {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #00b3ff;
+  color: #fff;
+  text-align: center;
+  font-size: bold;
+}
+#m-nav ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+#m-nav ul li:hover {
+  width: 100%;
+  background: rgba(51, 51, 51, 0.8);
+}
+#m-nav ul li:hover .num {
+  background: #006EFF;
+}/*# sourceMappingURL=layout.css.map */

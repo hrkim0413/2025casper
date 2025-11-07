@@ -19,37 +19,8 @@ $color-nav2 : #006EFF;
 $color-line-gray: #ccc;
 
 /* 글자 크기 변수 */
-$fz-s : 12px;
+$fz-s : 14px;
 $fz-m : 16px;
 
 $fz-title1 : 22px;
 $fz-title2 : 20px;
-
-/* reset */
-body {
-  font-family: "Noto Sans", sans-serif;
-  font-size: $fz-s;
-  color: $color-txt-black;
-  background: $color-txt-white;
-}
-
-a {
-  color: $color-txt-black;
-  text-decoration: none;
-}
-
-.blind {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-}
-
-/* common */
-.inner {
-  max-width: 1600px;
-  width: 100%;
-  margin: auto;
-}

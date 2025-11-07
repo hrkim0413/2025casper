@@ -43,40 +43,53 @@
   </header>
 
   <main>
-    <!-- 영상 -->
-    <section id="movie">
-      <video muted autoplay loop style="width: 100%;">
-        <source src="./images/main_KV.webm" type="video/webm">
-      </video>
-    </section>
-
-    <!-- 가장 많이 찾은 캐스퍼 -->
-    <section id="top3"></section>
-
-    <!-- 소개 -->
-    <section id="intro"></section>
-
-    <!-- 시승 신청 -->
-    <section id="test-drive"></section>
-
-    <!-- 이벤트 & 프로모션 -->
-    <section id="event"></section>
-
-    <!-- 캐스퍼 구매 안내 -->
-    <section id="buy"></section>
-
-    <!-- 고객지원 -->
-    <section id="customer"></section>
-
-    <nav id="m-nav">
-      <ul class="gnb">
+    <!-- 오른쪽 내비게이션 -->
+    <aside id="m-nav">
+      <ul>
         <li><span class="num">1</span><a href="#intro" title="소개">소개</a></li>
         <li><span class="num">2</span><a href="#test-drive" title="체험">체험</a></li>
         <li><span class="num">3</span><a href="#event" title="이벤트">이벤트</a></li>
         <li><span class="num">4</span><a href="#buy" title="구매">구매</a></li>
         <li><span class="num">5</span><a href="#customer" title="고객지원">고객지원</a></li>
       </ul>
-    </nav>
+    </aside>
+
+    <!-- 영상 -->
+    <section id="movie">
+      <video muted autoplay loop>
+        <source src="./images/main_KV.webm" type="video/webm">
+      </video>
+    </section>
+
+    <!-- 가장 많이 찾은 캐스퍼 -->
+    <section id="top3">
+      <div class="inner">가장 많이 찾은 캐스퍼</div>
+    </section>
+
+    <!-- 소개 -->
+    <section id="intro">
+      <div class="inner">소개</div>
+    </section>
+
+    <!-- 시승 신청 -->
+    <section id="test-drive">
+      <div class="inner">시승 신청</div>
+    </section>
+
+    <!-- 이벤트 & 프로모션 -->
+    <section id="event">
+      <div class="inner">이벤트 & 프로모션</div>
+    </section>
+
+    <!-- 캐스퍼 구매 안내 -->
+    <section id="buy">
+      <div class="inner">캐스퍼 구매 안내</div>
+    </section>
+
+    <!-- 고객지원 -->
+    <section id="customer">
+      <div class="inner">고객지원</div>
+    </section>
   </main>
 
   <footer>
@@ -95,23 +108,50 @@
 
       <address>
         <dl>
-          <dt>사업자등록번호 : </dt>
-          <dd>101-81-09147</dd>
-          <dt>통신판매업신고번호 : </dt>
-          <dd>2002-01546</dd>
-          <dt>대표이사 : </dt>
-          <dd>MUNOZ BARCELO JOSE ANTONIO</dd>
-          <dt>캐스퍼 고객센터 : </dt>
-          <dd>080-500-6000</dd>
-          <dt>주소 : </dt>
-          <dd>서울시 서초구 헌릉로 12</dd>
-          <dt>호스팅서비스 제공 : </dt>
-          <dd>현대오토에버(주)</dd>
+          <div>
+            <dt>사업자등록번호 : </dt>
+            <dd>101-81-09147</dd>
+          </div>
+          <div>
+            <dt>통신판매업신고번호 : </dt>
+            <dd>2002-01546</dd>
+          </div>
+          <div>
+            <dt>대표이사 : </dt>
+            <dd>MUNOZ BARCELO JOSE ANTONIO</dd>
+          </div>
+          <div>
+            <dt>캐스퍼 고객센터 : </dt>
+            <dd>080-500-6000</dd>
+          </div>
+          <div>
+            <dt>주소 : </dt>
+            <dd>서울시 서초구 헌릉로 12</dd>
+          </div>
+          <div>
+            <dt>호스팅서비스 제공 : </dt>
+            <dd>현대오토에버(주)</dd>
+          </div>
         </dl>
+        <p>copyright &copy;hyundai motor company, all right reserved.</p>
       </address>
-      <p>copyright &copy;hyundai motor company, all right reserved.</p>
     </div>
   </footer>
+
+  <div class="modal">
+    <div class="modal-inner">
+      <a href="#" title="자세히 보기" class="img-box">
+        <img src="./images/pc_prod_notice_20211210.jpg" alt="">
+      </a>
+      <div class="txt-box">
+        <div>
+          <input type="checkbox" id="m-ck">
+          <label for="m-ck">오늘 하루 창 열지 않기</label>
+        </div>
+        <button class="close">닫기</button>
+      </div>
+    </div>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>

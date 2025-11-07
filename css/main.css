@@ -1,1 +1,79 @@
-/*# sourceMappingURL=main.css.map */
+@charset "UTF-8";
+/* 폰트 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+/* 컬러 변수 */
+/* 글자 크기 변수 */
+/* 영상 */
+#movie {
+  width: 100%;
+  height: 100vh;
+}
+#movie video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#top3 {
+  height: 1146px;
+  background: #c4dadd;
+}
+
+#intro {
+  height: 1146px;
+  background: #b6dbe0;
+}
+
+#test-drive {
+  height: 923px;
+  background: #99dee7;
+}
+
+#event {
+  height: 923px;
+  background: #70cad6;
+}
+
+#buy {
+  height: 923px;
+  background: #51c8d8;
+}
+
+#customer {
+  height: 923px;
+  background: #31cde2;
+}
+
+/* 모달 */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 26, 29, 0.8);
+}
+.modal .modal-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+}
+.modal .txt-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.modal .txt-box input {
+  margin: 0;
+  vertical-align: top;
+}
+.modal .txt-box .close {
+  background: none;
+  border: none;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
