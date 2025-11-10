@@ -6,6 +6,7 @@ function init() {
   headerFn();
   asideFn();
   modal();
+  top3Fn();
 }
 
 function headerFn() {
@@ -15,12 +16,10 @@ function headerFn() {
 
   // 마우스 오버시 배경색 변경
   header.addEventListener('mouseenter', function () {
-    header.classList.add('h-on');
-    headerLogo.src = './images/logo-casper_black.png';
+    headerAddOn();
   })
   header.addEventListener('mouseleave', function () {
-    header.classList.remove('h-on');
-    headerLogo.src = './images/logo-casper-white.png';
+    headerRemoveOn();
   })
 
   // 메뉴 클릭시 section 이동
@@ -37,6 +36,38 @@ function headerFn() {
       })
     })
   })
+
+  // 스크롤시 배경색 변경
+  window.addEventListener('scroll', function () {
+    const nowScroll = window.scrollY;
+    const headerHeight = document.querySelector('header').offsetHeight;
+    const top3Top = document.getElementById('top3').offsetTop;
+
+    if (nowScroll >= (top3Top - headerHeight)) {
+      headerAddOn();
+
+      // 마우스 오버시 배경색 변경되는 오류 수정
+      header.addEventListener('mouseleave', function () {
+        headerAddOn();
+      })
+    } else {
+      headerRemoveOn();
+
+      // 마우스 오버시 배경색 변경되는 오류 수정
+      header.addEventListener('mouseleave', function () {
+        headerRemoveOn();
+      })
+    }
+  })
+
+  function headerAddOn() {
+    header.classList.add('h-on');
+    headerLogo.src = './images/logo-casper_black.png';
+  }
+  function headerRemoveOn() {
+    header.classList.remove('h-on');
+    headerLogo.src = './images/logo-casper-white.png';
+  }
 }
 
 function asideFn() {
@@ -77,4 +108,22 @@ function modal() {
   function modalClose() {
     modal.style.display = 'none';
   }
+}
+
+function top3Fn() {
+  let top3Swiper = new Swiper("#top3 .swiper", {
+    autoplay: {
+      delay: 3000,
+      disableInInteration: false,
+    },
+    loop: true,
+    navigation: {
+      nextEl: "#top3 .swiper-button-next",
+      prevEl: "#top3 .swiper-button-prev",
+    },
+    pagination: {
+      el: "#top3 .swiper-pagination",
+      clickable: true,
+    },
+  });
 }

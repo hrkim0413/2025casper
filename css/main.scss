@@ -1,8 +1,24 @@
 @charset "utf-8";
 @use 'common' as *;
 
+/* common */
+.main-title {
+  // padding: 80px 0 10px;
+  margin-bottom: 20px;
+  font-size: $fz-title3;
+  font-weight: bold;
+  text-align: center;
+}
+
+.main-desc {
+  margin-bottom: 50px;
+  font-size: $fz-m;
+  text-align: center;
+}
+
 /* 영상 */
 #movie {
+  position: relative;
   width: 100%;
   height: 100vh;
 
@@ -11,33 +27,210 @@
     height: 100%;
     object-fit: cover;
   }
+
+  .m-info {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    color: $color-txt-white;
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 60px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin-bottom: 30px;
+      font-size: $fz-m;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    a {
+      padding: 3px 10px;
+      color: $color-txt-white;
+      text-decoration: underline;
+    }
+
+    li:first-child a {
+      background: $color-nav2;
+    }
+  }
+
+  .next-btn {
+    display: inline-block;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    @include arrow-btn();
+    transform: translateX(-50%) rotate(-45deg);
+  }
 }
 
+/* 가장 많이 찾은 캐스퍼 */
 #top3 {
-  height: 1146px;
-  background: #c4dadd;
+  .swiper-slide {
+    text-align: center;
+
+    .rank {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 5px 10px;
+      border: 1px solid $color-txt-blue2;
+      color: $color-txt-blue2;
+      border-radius: 20px;
+    }
+
+    h3 {
+      margin-bottom: 50px;
+      color: $color-txt-blue3;
+      font-size: $fz-title1;
+      font-weight: bold;
+    }
+
+    .img-box {
+      width: 50%;
+      margin: 0 auto 50px;
+      transform: scale(0);
+      transition: $ani-time05;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin-bottom: 50px;
+      text-align-last: left;
+    }
+
+    li {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+      line-height: 1.6;
+
+      &:last-child {
+        color: $color-txt-blue3;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 100%;
+        background: $color-line-gray;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+
+      .color {
+        display: inline-block;
+        width: 40px;
+        height: 30px;
+        border: 1px solid $color-line-gray;
+
+        &.kaki {
+          background: #494b3e;
+        }
+
+        &.black {
+          background: #000;
+        }
+
+        &.white {
+          background: #fff;
+        }
+
+        &.orange {
+          background: #be5600;
+        }
+      }
+
+      strong {
+        font-size: $fz-title1;
+      }
+    }
+
+    .btn {
+      @include btn();
+
+      &:hover {
+        background: $color-txt-black;
+        color: $color-txt-white;
+      }
+    }
+  }
+
+  .swiper-slide-active {
+    .img-box {
+      transform: scale(1);
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $color-txt-black;
+  }
+
+  .swiper-pagination {
+    bottom: 50px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 100px;
+    border-radius: 5px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $color-txt-blue3;
+  }
 }
 
+/* 소개 */
 #intro {
   height: 1146px;
   background: #b6dbe0;
 }
 
+/* 시승 신청 */
 #test-drive {
   height: 923px;
   background: #99dee7;
 }
 
+/* 이벤트 & 프로모션 */
 #event {
   height: 923px;
   background: #70cad6;
 }
 
+/* 캐스퍼 구매 안내 */
 #buy {
   height: 923px;
   background: #51c8d8;
 }
 
+/* 고객지원 */
 #customer {
   height: 923px;
   background: #31cde2;

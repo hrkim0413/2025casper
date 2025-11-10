@@ -22,5 +22,29 @@ $color-line-gray: #ccc;
 $fz-s : 14px;
 $fz-m : 16px;
 
-$fz-title1 : 22px;
+$fz-title1 : 24px;
 $fz-title2 : 20px;
+$fz-title3 : 34px;
+
+/* 트랜지션 변수 */
+$ani-time03: 0.3s;
+$ani-time05: 0.5s;
+
+/* mixin */
+@mixin arrow-btn() {
+  width: 30px;
+  height: 30px;
+  border-left: 2px solid $color-txt-white;
+  border-bottom: 2px solid $color-txt-white;
+  transform: rotate(-45deg);
+}
+
+@mixin btn() {
+  display: inline-block;
+  min-width: 150px;
+  margin: auto;
+  padding: 10px 20px;
+  border: 1px solid $color-txt-black;
+  transition: $ani-time03;
+  box-sizing: border-box;
+}
