@@ -7,12 +7,16 @@ function init() {
   asideFn();
   modal();
   top3Fn();
+  introFn();
+  eventFn();
 }
 
 function headerFn() {
   const header = document.querySelector('header');
   const headerLogo = document.querySelector('.logo img');
   let menus = document.querySelectorAll('header nav a');
+  const headerHeight = document.querySelector('header').offsetHeight;
+  const top3Top = document.getElementById('top3').offsetTop;
 
   // 마우스 오버시 배경색 변경
   header.addEventListener('mouseenter', function () {
@@ -39,9 +43,7 @@ function headerFn() {
 
   // 스크롤시 배경색 변경
   window.addEventListener('scroll', function () {
-    const nowScroll = window.scrollY;
-    const headerHeight = document.querySelector('header').offsetHeight;
-    const top3Top = document.getElementById('top3').offsetTop;
+    let nowScroll = window.scrollY;
 
     if (nowScroll >= (top3Top - headerHeight)) {
       headerAddOn();
@@ -123,6 +125,40 @@ function top3Fn() {
     },
     pagination: {
       el: "#top3 .swiper-pagination",
+      clickable: true,
+    },
+  });
+}
+
+function introFn() {
+  let introTop = document.getElementById('intro').offsetTop;
+  const headerHeight = document.querySelector('header').offsetHeight;
+  const texts = document.querySelectorAll('#intro p');
+
+  window.addEventListener('scroll', function () {
+    let nowScroll = window.scrollY;
+
+    if (nowScroll >= (introTop - headerHeight)) {
+      texts.forEach(function (item) {
+        item.classList.add('act');
+      })
+    } else {
+      texts.forEach(function (item) {
+        item.classList.remove('act');
+      })
+    }
+  })
+}
+
+function eventFn() {
+  let eventSwiper = new Swiper("#event .swiper", {
+    autoplay: {
+      delay: 3000,
+      disableInInteration: false,
+    },
+    loop: true,
+    pagination: {
+      el: "#event .swiper-pagination",
       clickable: true,
     },
   });

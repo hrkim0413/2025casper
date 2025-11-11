@@ -44,7 +44,14 @@ $ani-time05: 0.5s;
   min-width: 150px;
   margin: auto;
   padding: 10px 20px;
+  background: $color-txt-white;
   border: 1px solid $color-txt-black;
+  text-align: center;
   transition: $ani-time03;
   box-sizing: border-box;
+
+  &:hover {
+    background: $color-txt-black;
+    color: $color-txt-white;
+  }
 }
