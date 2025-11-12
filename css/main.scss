@@ -375,12 +375,6 @@
 
 /* 캐스퍼 구매 안내 */
 #buy {
-  .inner {}
-
-  .main-title {}
-
-  .main-desc {}
-
   .buy-tit {
     margin-bottom: 50px;
     font-size: $fz-title1;
@@ -424,6 +418,141 @@
 
 /* 고객지원 */
 #customer {
-  height: 923px;
-  background: #31cde2;
+  background: $color-line-gray2;
+
+  .customer-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+
+    // common
+    .customer-tit {
+      margin-bottom: 10px;
+      font-size: $fz-title2;
+    }
+
+    .btn-link {
+      display: block;
+      color: $color-nav2;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    li {
+      position: relative;
+      padding: 30px;
+      background: $color-txt-white;
+      box-sizing: border-box;
+
+      &.ars-box {
+        grid-area: 1/1/2/5;
+      }
+
+      &.banner-box {
+        grid-area: 3/1/4/5;
+        padding: 0;
+        background: none;
+      }
+
+      .customer-desc {
+        margin-bottom: 10px;
+      }
+
+      .customer-disc {
+        color: $color-line-gray;
+        font-size: 0.9rem;
+      }
+
+      .customer-img {
+        margin-top: 30px;
+        text-align: center;
+
+        img {
+          width: 50px;
+        }
+
+        .btn-link {
+          display: inline-block;
+          margin: 0 10px;
+        }
+      }
+
+      .btn-normal {
+        display: block;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+        padding: 10px;
+        background: $color-txt-blue3;
+        color: $color-txt-white;
+        text-align: center;
+      }
+    }
+
+    .ars-box {
+      display: flex;
+      flex-wrap: wrap;
+
+      .customer-tit {
+        width: 100%;
+        text-align: center;
+      }
+
+      .box {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 50%;
+        padding-bottom: 30px;
+        box-sizing: border-box;
+
+        &.left {
+          border-right: 1px solid $color-line-gray;
+        }
+      }
+
+      .txt {
+        position: relative;
+        text-align: center;
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 110px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 75px;
+          height: 46px;
+          background: url('../images/bg-support-ars.png') no-repeat 0 center / cover;
+        }
+
+        strong {
+          display: block;
+          margin-bottom: 10px;
+          font-size: $fz-m;
+        }
+      }
+
+      .right .txt::after {
+        width: 60px;
+        background-position-x: 100%;
+      }
+
+      dl {
+        dt {
+          font-weight: bold;
+        }
+
+        dd+dt {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
 }

@@ -394,6 +394,115 @@
 
 /* 고객지원 */
 #customer {
-  height: 923px;
-  background: #31cde2;
+  background: #ededed;
+}
+#customer .customer-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+}
+#customer .customer-list .customer-tit {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+#customer .customer-list .btn-link {
+  display: block;
+  color: #006EFF;
+}
+#customer .customer-list .btn-link:hover {
+  text-decoration: underline;
+}
+#customer .customer-list li {
+  position: relative;
+  padding: 30px;
+  background: #fff;
+  box-sizing: border-box;
+}
+#customer .customer-list li.ars-box {
+  grid-area: 1/1/2/5;
+}
+#customer .customer-list li.banner-box {
+  grid-area: 3/1/4/5;
+  padding: 0;
+  background: none;
+}
+#customer .customer-list li .customer-desc {
+  margin-bottom: 10px;
+}
+#customer .customer-list li .customer-disc {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+#customer .customer-list li .customer-img {
+  margin-top: 30px;
+  text-align: center;
+}
+#customer .customer-list li .customer-img img {
+  width: 50px;
+}
+#customer .customer-list li .customer-img .btn-link {
+  display: inline-block;
+  margin: 0 10px;
+}
+#customer .customer-list li .btn-normal {
+  display: block;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  padding: 10px;
+  background: #052B58;
+  color: #fff;
+  text-align: center;
+}
+#customer .customer-list .ars-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+#customer .customer-list .ars-box .customer-tit {
+  width: 100%;
+  text-align: center;
+}
+#customer .customer-list .ars-box .box {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 50%;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+#customer .customer-list .ars-box .box.left {
+  border-right: 1px solid #ccc;
+}
+#customer .customer-list .ars-box .txt {
+  position: relative;
+  text-align: center;
+}
+#customer .customer-list .ars-box .txt::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75px;
+  height: 46px;
+  background: url("../images/bg-support-ars.png") no-repeat 0 center/cover;
+}
+#customer .customer-list .ars-box .txt strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+#customer .customer-list .ars-box .right .txt::after {
+  width: 60px;
+  background-position-x: 100%;
+}
+#customer .customer-list .ars-box dl dt {
+  font-weight: bold;
+}
+#customer .customer-list .ars-box dl dd + dt {
+  margin-top: 10px;
 }/*# sourceMappingURL=main.css.map */
