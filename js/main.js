@@ -9,6 +9,7 @@ function init() {
   top3Fn();
   introFn();
   eventFn();
+  customerFn();
 }
 
 function headerFn() {
@@ -162,4 +163,11 @@ function eventFn() {
       clickable: true,
     },
   });
+}
+
+function customerFn() {
+  const customerImg = document.querySelector('#customer .banner-box img');
+  const randomNum = Math.floor(Math.random() * 3) + 1;
+
+  customerImg.src = `./images/ran_banner0${randomNum}.jpg`;
 }
