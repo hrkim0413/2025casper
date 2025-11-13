@@ -88,8 +88,11 @@ header .right-nav li {
   color: #fff;
   font-size: 20px;
 }
-header .right-nav li i {
+header .right-nav li button {
+  background: none;
+  border: none;
   cursor: pointer;
+  font-size: inherit;
 }
 
 /* footer */
@@ -139,21 +142,23 @@ footer .f-lnb ul li a:hover {
 footer .f-lnb ul li:nth-child(2) a {
   color: #fff;
 }
-footer address {
+footer .f-txt {
   grid-area: item03;
   color: #ccc;
   line-height: 20px;
 }
-footer address dl {
+footer .f-txt dl {
   display: flex;
   flex-wrap: wrap;
-  gap: 0 30px;
 }
-footer address dl dt,
-footer address dl dd {
+footer .f-txt dl dt,
+footer .f-txt dl dd {
   display: inline-block;
 }
-footer address dl p {
+footer .f-txt dl dd {
+  margin-right: 30px;
+}
+footer .f-txt p {
   text-transform: uppercase;
 }
 

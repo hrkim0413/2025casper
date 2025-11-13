@@ -92,8 +92,11 @@ header {
       color: $color-txt-white;
       font-size: $fz-title2;
 
-      i {
+      button {
+        background: none;
+        border: none;
         cursor: pointer;
+        font-size: inherit;
       }
     }
   }
@@ -158,7 +161,7 @@ footer {
     }
   }
 
-  address {
+  .f-txt {
     grid-area: item03;
     color: $color-line-gray;
     line-height: 20px;
@@ -166,18 +169,21 @@ footer {
     dl {
       display: flex;
       flex-wrap: wrap;
-      gap: 0 30px;
 
       dt,
       dd {
         display: inline-block;
       }
 
-      p {
-        text-transform: uppercase;
+      dd {
+        margin-right: 30px;
       }
+
     }
 
+    p {
+      text-transform: uppercase;
+    }
   }
 }
 

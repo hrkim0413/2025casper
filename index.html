@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CASPER</title>
+  <meta name="description" content="CASPER 온라인 구매 페이지">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/reset.css">
@@ -19,7 +20,7 @@
       <h1 class="logo"><a href="./index.html" title="메인페이지로 바로가기"><img src="./images/logo-casper-white.png"
             alt="CASPER"></a></h1>
 
-      <nav>
+      <nav aria-label="주요 메뉴">
         <ul class="gnb">
           <li><a href="#intro" title="소개">소개</a></li>
           <li><a href="#test-drive" title="체험">체험</a></li>
@@ -31,12 +32,16 @@
 
       <ul class="right-nav">
         <li>
-          <i class="fas fa-user"></i>
-          <span class="blind">로그인</span>
+          <button>
+            <i class="fas fa-user"></i>
+            <span class="blind">로그인</span>
+          </button>
         </li>
         <li>
-          <i class="fas fa-bell"></i>
-          <span class="blind">알림</span>
+          <button>
+            <i class="fas fa-bell"></i>
+            <span class="blind">알림</span>
+          </button>
         </li>
       </ul>
     </div>
@@ -44,7 +49,7 @@
 
   <main>
     <!-- 오른쪽 내비게이션 -->
-    <aside id="m-nav">
+    <aside id="m-nav" aria-label="메인 내비게이션 바로가기">
       <ul>
         <li><span class="num">1</span><a href="#intro" title="소개">소개</a></li>
         <li><span class="num">2</span><a href="#test-drive" title="체험">체험</a></li>
@@ -56,7 +61,7 @@
 
     <!-- 영상 -->
     <section id="movie">
-      <video muted autoplay loop>
+      <video aria-label="캐스퍼 소개 영상" muted autoplay loop>
         <source src="./images/main_KV.webm" type="video/webm">
       </video>
       <div class="m-info">
@@ -68,7 +73,7 @@
           <li><a href="https://casper.hyundai.com/vehicles/highlight" title="자세히 보기">자세히 보기</a></li>
         </ul>
       </div>
-      <a href="#top3" class="next-btn">
+      <a href="#top3" title="가장 많이 찾은 캐스퍼 영역으로 이동" class="next-btn">
         <span class="blind">가장 많이 찾은 캐스퍼 영역으로 이동</span>
         <!-- <i class="fa-solid fa-chevron-down"></i> -->
       </a>
@@ -110,7 +115,7 @@
                 </li>
                 <li><strong>19,600,000</strong>원</li>
               </ul>
-              <a href="#" title="견적내기" class="btn">견적내기</a>
+              <a href="javascript:void(0)" title="견적내기" class="btn">견적내기</a>
             </div>
             <div class="swiper-slide">
               <span class="rank">2위</span>
@@ -141,7 +146,7 @@
                 </li>
                 <li><strong>16,900,000</strong>원</li>
               </ul>
-              <a href="#" title="견적내기" class="btn">견적내기</a>
+              <a href="javascript:void(0)" title="견적내기" class="btn">견적내기</a>
             </div>
             <div class="swiper-slide">
               <span class="rank">3위</span>
@@ -172,7 +177,7 @@
                 </li>
                 <li><strong>14,600,000</strong>원</li>
               </ul>
-              <a href="#" title="견적내기" class="btn">견적내기</a>
+              <a href="javascript:void(0)" title="견적내기" class="btn">견적내기</a>
             </div>
           </div>
 
@@ -195,7 +200,7 @@
         감성의 <br>
         suv 디자인
       </p>
-      <a href="#" title="더보기" class="btn">더보기</a>
+      <a href="javascript:void(0)" title="더보기" class="btn">더보기</a>
     </section>
 
     <!-- 시승 신청 -->
@@ -207,8 +212,8 @@
           <div class="drive-box">
             <h3 class="drive-tit">현대자동차 드라이빙라운지 <br>/ CASPER STUDIO 시승</h3>
             <p class="drive-desc">드라이빙라운지와 CASPER STUDIO에서 <br>캐스퍼를 체험해보세요.</p>
-            <a href="#" title="시승 신청하기" class="drive-btn drive-btn1">시승 신청하기</a>
-            <a href="#" title="시승 신청 조회" class="drive-btn drive-btn2">시승 신청 조회</a>
+            <a href="javascript:void(0)" title="시승 신청하기" class="drive-btn drive-btn1">시승 신청하기</a>
+            <a href="javascript:void(0)" title="시승 신청 조회" class="drive-btn drive-btn2">시승 신청 조회</a>
           </div>
           <p>&middot; 시승 신청은 만 21세 이상 운전면허 소지자면 누구나 이용 가능합니다.</p>
         </article>
@@ -216,7 +221,7 @@
           <div class="drive-box">
             <h3 class="drive-tit">쏘카 <br>카셰어링 시승</h3>
             <p class="drive-desc">24시간 언제나 내 근처에서 편리하게 <br>캐스퍼를 체험하실 수 있습니다.</p>
-            <a href="#" title="시승 신청하기" class="drive-btn drive-btn1">시승 신청하기</a>
+            <a href="javascript:void(0)" title="시승 신청하기" class="drive-btn drive-btn1">시승 신청하기</a>
           </div>
           <p>&middot; 쏘카는 만 21세 이상, 운전면허 취득 1년 이상 시 이용할 수 있습니다.</p>
         </article>
@@ -231,27 +236,27 @@
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <a href="#" title="배너1 바로가기">
+              <a href="javascript:void(0)" title="배너1 바로가기">
                 <img src="./images/event01.png" alt="배너1">
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="#" title="배너2 바로가기">
+              <a href="javascript:void(0)" title="배너2 바로가기">
                 <img src="./images/event02.jpg" alt="배너2">
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="#" title="배너3 바로가기">
+              <a href="javascript:void(0)" title="배너3 바로가기">
                 <img src="./images/event03.jpg" alt="배너3">
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="#" title="배너4 바로가기">
+              <a href="javascript:void(0)" title="배너4 바로가기">
                 <img src="./images/event04.jpg" alt="배너4">
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="#" title="배너5 바로가기">
+              <a href="javascript:void(0)" title="배너5 바로가기">
                 <img src="./images/event05.jpg" alt="배너5">
               </a>
             </div>
@@ -271,32 +276,32 @@
           <ul class="buy-list">
             <li>
               <h4>쉬운 모델 선택</h4>
-              <img src="./images/icon_01.jpg" alt="">
+              <img src="./images/icon_01.jpg" alt="쉬운 모델 선택">
               <p>원하는 사양의 차량을 3D로 확인해 볼 수 있고, <br>데이터를 기반으로 나에게 맞는 캐스퍼를 추천 받을 수 있습니다.</p>
             </li>
             <li>
               <h4>편리한 구매</h4>
-              <img src="./images/icon_02.jpg" alt="">
+              <img src="./images/icon_02.jpg" alt="편리한 구매">
               <p>구매 시뮬레이션을 통해 <br>나의 자금 사정에 맞는 <br>구매 계획을 세울 수 있습니다.</p>
             </li>
             <li>
               <h4>자유로운 취소/변경</h4>
-              <img src="./images/icon_03.jpg" alt="">
+              <img src="./images/icon_03.jpg" alt="자유로운 취소/변경">
               <p>계약 후에도 차량대금 결제 전이라면 <br>자유롭게 원하는 사양으로 변경하고, <br>계약을 취소할 수 있습니다.(단, 특별주문차 제외)</p>
             </li>
             <li>
               <h4>찾아가는 배송</h4>
-              <img src="./images/icon_04.jpg" alt="">
+              <img src="./images/icon_04.jpg" alt="찾아가는 배송">
               <p>집, 직장 등 내가 원하는 장소에서 <br>캐스퍼를 배송 받을 수 있습니다.</p>
             </li>
             <li>
               <h4>진행 단계 알림</h4>
-              <img src="./images/icon_05.jpg" alt="">
+              <img src="./images/icon_05.jpg" alt="진행 단계 알림">
               <p>계약부터 차량 등록까지 <br>나의 계약 진행 상태를 메세지로 전송받을 수 있습니다.</p>
             </li>
             <li>
               <h4>향산된 고객지원</h4>
-              <img src="./images/icon_06.jpg" alt="">
+              <img src="./images/icon_06.jpg" alt="향산된 고객지원">
               <p>밤 10시까지 캐스퍼 고객센터(080-500-6000)를 <br>통해 문의사항을 해결할 수 있고, 현대자동차의 <br>직영서비스센터와 블루핸즈도 이용할 수 있습니다.</p>
             </li>
           </ul>
@@ -304,7 +309,7 @@
         <iframe src="https://www.youtube.com/embed/MQSGzDRejUM?si=3OHxqjfLvQUGFI9H" title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
       </div>
     </section>
 
@@ -318,7 +323,7 @@
             <div class="box left">
               <p class="txt">
                 <strong>캐스퍼 구매 상담</strong>
-                <a href="#" title="ARS 이용 방법" class="btn-link">ARS 이용 방법 &gt;</a>
+                <a href="javascript:void(0)" title="ARS 이용 방법" class="btn-link">ARS 이용 방법 &gt;</a>
               </p>
               <dl>
                 <dt>전화번호</dt>
@@ -330,8 +335,8 @@
             <div class="box right">
               <p class="txt">
                 <strong>캐스퍼 정비/멤버십 상담</strong>
-                <a href="#" title="누르는 ARS 이용 방법" class="btn-link">누르는 ARS 이용 방법 &gt;</a>
-                <a href="#" title="보이는 ARS 이용 방법" class="btn-link">보이는 ARS 이용 방법 &gt;</a>
+                <a href="javascript:void(0)" title="누르는 ARS 이용 방법" class="btn-link">누르는 ARS 이용 방법 &gt;</a>
+                <a href="javascript:void(0)" title="보이는 ARS 이용 방법" class="btn-link">보이는 ARS 이용 방법 &gt;</a>
               </p>
               <dl>
                 <dt>전화번호</dt>
@@ -346,89 +351,45 @@
           <li>
             <h3 class="customer-tit">1:1 문의</h3>
             <p class="customer-desc">1:1 문의가 필요하신가요?</p>
-            <a href="#" title="나의 1:1 문의 내역" class="btn-link">나의 1:1 문의 내역 &gt;</a>
-            <a href="#" title="1:1 문의하기" class="btn btn-normal">1:1 문의하기</a>
+            <a href="javascript:void(0)" title="나의 1:1 문의 내역" class="btn-link">나의 1:1 문의 내역 &gt;</a>
+            <a href="javascript:void(0)" title="1:1 문의하기" class="btn btn-normal">1:1 문의하기</a>
           </li>
           <li>
             <h3 class="customer-tit">채팅 상담</h3>
             <p class="customer-desc">채팅 상담이 필요하신가요?</p>
             <span class="customer-disc">월~일요일 09:00 ~ 22:00</span>
-            <a href="#" title="채팅상담원 연결" class="btn btn-normal">채팅상담원 연결</a>
+            <a href="javascript:void(0)" title="채팅상담원 연결" class="btn btn-normal">채팅상담원 연결</a>
           </li>
           <li>
             <h3 class="customer-tit">원격 지원</h3>
             <p class="customer-desc">상담원이 고객님과 같은 PC 화면을 보면서 도움을 드립니다.</p>
             <span class="customer-disc">월~일요일 09:00 ~ 22:00</span>
-            <a href="#" title="원격 지원 시작하기" class="btn btn-normal">원격 지원 시작하기</a>
+            <a href="javascript:void(0)" title="원격 지원 시작하기" class="btn btn-normal">원격 지원 시작하기</a>
           </li>
           <li>
             <h3 class="customer-tit">마이현대 APP</h3>
             <p class="customer-desc">현대자동차 멤버십과 차량 정비/점검, 키라이프 서비스까지 모두 마이 현대로 관리하세요.</p>
             <div class="customer-img">
-              <img src="./images/app.png" alt="" class="">
+              <img src="./images/app.png" alt="마이현대 APP" class="">
               <br>
-              <a href="#" title="iOS" class="btn-link">iOS &gt;</a>
-              <a href="#" title="Android" class="btn-link">Android &gt;</a>
+              <a href="javascript:void(0)" title="iOS" class="btn-link">iOS &gt;</a>
+              <a href="javascript:void(0)" title="Android" class="btn-link">Android &gt;</a>
             </div>
           </li>
           <li class="banner-box">
-            <img src="./images/ran_banner01.jpg" alt="">
+            <a href="javascript:void(0)" title="배너 바로가기">
+              <img src="./images/ran_banner01.jpg" alt="배너">
+            </a>
           </li>
         </ul>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="inner">
-      <h2><a href="./index.html" title="메인페이지로 이동"><img src="./images/f-logo-hyundai.png" alt="HYUNDAI"></a></h2>
-
-      <nav class="f-lnb">
-        <ul>
-          <li><a href="#" title="이용약관">이용약관</a></li>
-          <li><a href="#" title="개인정보 처리방침">개인정보 처리방침</a></li>
-          <li><a href="#" title="저작권안내">저작권안내</a></li>
-          <li><a href="#" title="공동인증서 안내">공동인증서 안내</a></li>
-          <li><a href="#" title="현대자동차 홈페이지">현대자동차 홈페이지</a></li>
-        </ul>
-      </nav>
-
-      <address>
-        <dl>
-          <div>
-            <dt>사업자등록번호 : </dt>
-            <dd>101-81-09147</dd>
-          </div>
-          <div>
-            <dt>통신판매업신고번호 : </dt>
-            <dd>2002-01546</dd>
-          </div>
-          <div>
-            <dt>대표이사 : </dt>
-            <dd>MUNOZ BARCELO JOSE ANTONIO</dd>
-          </div>
-          <div>
-            <dt>캐스퍼 고객센터 : </dt>
-            <dd>080-500-6000</dd>
-          </div>
-          <div>
-            <dt>주소 : </dt>
-            <dd>서울시 서초구 헌릉로 12</dd>
-          </div>
-          <div>
-            <dt>호스팅서비스 제공 : </dt>
-            <dd>현대오토에버(주)</dd>
-          </div>
-        </dl>
-        <p>copyright &copy;hyundai motor company, all right reserved.</p>
-      </address>
-    </div>
-  </footer>
-
   <div class="modal">
     <div class="modal-inner">
-      <a href="#" title="자세히 보기" class="img-box">
-        <img src="./images/pc_prod_notice_20211210.jpg" alt="">
+      <a href="javascript:void(0)" title="자세히 보기" class="img-box">
+        <img src="./images/pc_prod_notice_20211210.jpg" alt="팝업">
       </a>
       <div class="txt-box">
         <div>
@@ -439,6 +400,42 @@
       </div>
     </div>
   </div>
+
+  <footer>
+    <div class="inner">
+      <h2><a href="./index.html" title="메인페이지로 이동"><img src="./images/f-logo-hyundai.png" alt="HYUNDAI"></a></h2>
+
+      <nav class="f-lnb">
+        <ul>
+          <li><a href="javascript:void(0)" title="이용약관">이용약관</a></li>
+          <li><a href="javascript:void(0)" title="개인정보 처리방침">개인정보 처리방침</a></li>
+          <li><a href="javascript:void(0)" title="저작권안내">저작권안내</a></li>
+          <li><a href="javascript:void(0)" title="공동인증서 안내">공동인증서 안내</a></li>
+          <li><a href="javascript:void(0)" title="현대자동차 홈페이지">현대자동차 홈페이지</a></li>
+        </ul>
+      </nav>
+
+      <div class="f-txt">
+        <address>
+          <dl>
+            <dt>사업자등록번호 : </dt>
+            <dd>101-81-09147</dd>
+            <dt>통신판매업신고번호 : </dt>
+            <dd>2002-01546</dd>
+            <dt>대표이사 : </dt>
+            <dd>MUNOZ BARCELO JOSE ANTONIO</dd>
+            <dt>캐스퍼 고객센터 : </dt>
+            <dd>080-500-6000</dd>
+            <dt>주소 : </dt>
+            <dd>서울시 서초구 헌릉로 12</dd>
+            <dt>호스팅서비스 제공 : </dt>
+            <dd>현대오토에버(주)</dd>
+          </dl>
+        </address>
+        <p>copyright &copy;hyundai motor company, all right reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
