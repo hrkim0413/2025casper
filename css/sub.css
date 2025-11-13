@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/* 폰트 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+/* 컬러 변수 */
+/* 글자 크기 변수 */
+/* 트랜지션 변수 */
+/* mixin */
+/* common */
+header {
+  position: static;
+}
+header nav .gnb a,
+header .right-nav li {
+  color: #333;
+}
+
+/* 로그인 login.php */
+#login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 660px;
+  height: calc(100vh - 76px - 172px);
+  background: #ededed;
+}
+#login-page form {
+  width: 400px;
+}
+#login-page legend {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+#login-page p {
+  margin-bottom: 10px;
+}
+#login-page p input {
+  width: 100%;
+  padding: 15px 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+#login-page p input[type=checkbox] {
+  width: auto;
+}
+#login-page p input[type=submit] {
+  background: #225499;
+  color: #fff;
+  cursor: pointer;
+}
+#login-page p:last-child {
+  margin-bottom: 0;
+  text-align: center;
+}
+#login-page p:last-child a {
+  position: relative;
+  margin: 0 20px;
+}
+#login-page p:last-child a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 100%;
+  background: #ccc;
+}
+#login-page p:last-child a:last-child::after {
+  display: none;
+}/*# sourceMappingURL=sub.css.map */

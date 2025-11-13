@@ -88,11 +88,13 @@ header .right-nav li {
   color: #fff;
   font-size: 20px;
 }
+header .right-nav li a,
 header .right-nav li button {
   background: none;
   border: none;
-  cursor: pointer;
+  color: inherit;
   font-size: inherit;
+  cursor: pointer;
 }
 
 /* footer */

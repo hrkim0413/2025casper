@@ -1,0 +1,80 @@
+@charset "utf-8";
+@use 'common' as *;
+
+/* common */
+header {
+  position: static;
+
+  nav .gnb a,
+  .right-nav li {
+    color: $color-txt-black;
+  }
+}
+
+/* 로그인 login.php */
+#login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 660px;
+  height: calc(100vh - 76px - 172px);
+  background: $color-line-gray2;
+
+  form {
+    width: 400px;
+  }
+
+  legend {
+    margin-bottom: 20px;
+    font-size: $fz-title1;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 10px;
+
+    input {
+      width: 100%;
+      padding: 15px 10px;
+      border: 1px solid $color-line-gray;
+      box-sizing: border-box;
+    }
+
+    input[type="checkbox"] {
+      width: auto;
+    }
+
+    input[type="submit"] {
+      background: $color-txt-blue1;
+      color: $color-txt-white;
+      cursor: pointer;
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+    text-align: center;
+
+    a {
+      position: relative;
+      margin: 0 20px;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 100%;
+        background: $color-line-gray;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+    }
+  }
+}

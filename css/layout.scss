@@ -92,11 +92,13 @@ header {
       color: $color-txt-white;
       font-size: $fz-title2;
 
+      a,
       button {
         background: none;
         border: none;
-        cursor: pointer;
+        color: inherit;
         font-size: inherit;
+        cursor: pointer;
       }
     }
   }
